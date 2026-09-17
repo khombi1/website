@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Enquiry - Sweet Crumbs Bakery</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+  <img src="images/logo.png" alt="Sweet Crumbs Bakery logo" class="logo-img">
+  Sweet Crumbs Bakery
+</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Make an Enquiry</h1>
+      <p>Planning a celebration or have a special order in mind? Fill in the form below and we'll get back to you.</p>
+    </section>
+
+    <section>
+      <form id="enquiry-form">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div>
+          <label for="occasion">Occasion</label>
+          <select id="occasion" name="occasion">
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send Enquiry</button>
+      </form>
+
+      <p id="form-confirmation" style="display:none;">Thank you! Your enquiry has been received.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright 2026 Sweet Crumbs Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
