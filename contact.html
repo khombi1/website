@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sweet Crumbs Bakery, Nkomazi, Mpumalanga</title>
+  <meta name="description" content="Visit Sweet Crumbs Bakery at 123 Main Road, Nkomazi, Mpumalanga. Open Monday to Saturday, 7am to 5pm. Call, email or send us a message.">
+  <meta name="keywords" content="contact Sweet Crumbs Bakery, bakery Nkomazi, bakery opening hours, bakery Mpumalanga address">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Contact Us - Sweet Crumbs Bakery</title>
 </head>
 <body>
 
   <header>
     <div class="logo">
-  <img src="images/logo.png" alt="Sweet Crumbs Bakery logo" class="logo-img">
-  Sweet Crumbs Bakery
-</div>
+      <img src="images/logo.png" alt="Sweet Crumbs Bakery logo" class="logo-img">
+      <span>Sweet Crumbs Bakery</span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -35,17 +38,60 @@
     <section class="location-card">
       <h2>Our Bakery</h2>
       <p>123 Main Road, Nkomazi, Mpumalanga</p>
-    <iframe
-  src="https://maps.google.com/maps?q=Nkomazi%2C%20Mpumalanga%2C%20South%20Africa&output=embed"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy">
-</iframe>
+      <div id="map" role="img" aria-label="Map showing the location of Sweet Crumbs Bakery"></div>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Nkomazi%2C+Mpumalanga%2C+South+Africa" target="_blank" rel="noopener">Open in Google Maps</a></p>
       <p>Phone: 013 123 4567</p>
       <p>Email: hello@sweetcrumbsbakery.co.za</p>
       <p>Open: Monday to Saturday, 7am - 5pm</p>
+    </section>
+
+    <section>
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" novalidate>
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="50" data-rule="name" autocomplete="name">
+          <span class="error" id="name-error"></span>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required data-rule="email" autocomplete="email">
+          <span class="error" id="email-error"></span>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required pattern="^(\+27|0)[0-9 ]{9,12}$" data-rule="phone" autocomplete="tel" placeholder="082 123 4567">
+          <span class="error" id="phone-error"></span>
+        </div>
+
+        <div>
+          <label for="topic">Message Type</label>
+          <select id="topic" name="topic" required data-rule="topic">
+            <option value="">Choose...</option>
+            <option value="General question">General question</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Compliment">Compliment</option>
+          </select>
+          <span class="error" id="topic-error"></span>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" data-rule="message"></textarea>
+          <span class="error" id="message-error"></span>
+        </div>
+
+        <button type="submit">Preview Email</button>
+      </form>
+
+      <div id="emailBox" hidden>
+        <h3>Your email is ready</h3>
+        <pre id="emailPreview"></pre>
+        <a id="sendEmail" class="btn" href="#">Send email</a>
+      </div>
     </section>
   </main>
 
@@ -53,5 +99,8 @@
     <p>Copyright 2026 Sweet Crumbs Bakery. All rights reserved.</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>

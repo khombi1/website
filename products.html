@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Fresh Bread, Cakes and Pastries | Sweet Crumbs Bakery</title>
+  <meta name="description" content="Browse fresh bread, croissants, cupcakes, muffins, cookies and custom celebration cakes, all baked in-house daily at Sweet Crumbs Bakery in Nkomazi.">
+  <meta name="keywords" content="fresh bread Nkomazi, croissants, cupcakes, muffins, cookies, celebration cakes Mpumalanga">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <title>Our Products - Sweet Crumbs Bakery</title>
 </head>
 <body>
 
   <header>
-   <div class="logo">
-  <img src="images/logo.png" alt="Sweet Crumbs Bakery logo" class="logo-img">
-  Sweet Crumbs Bakery
-</div> 
+    <div class="logo">
+      <img src="images/logo.png" alt="Sweet Crumbs Bakery logo" class="logo-img">
+      <span>Sweet Crumbs Bakery</span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -27,46 +29,60 @@
   </header>
 
   <main>
-    <section>
+    <section class="fade-in">
       <h1>Our Products</h1>
       <p>From crusty fresh loaves to delicate pastries and celebration cakes, every item is baked fresh in-house daily.</p>
+      <h2>Fresh From Our Oven</h2>
+      <label for="searchBox">Search:</label>
+      <input id="searchBox" type="search" placeholder="e.g. bread, cake">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect">
+        <option value="az">Name (A to Z)</option>
+        <option value="price">Price (low to high)</option>
+      </select>
     </section>
 
-    <section class="menu-grid">
-      <div class="menu-item">
-        <img src="images/bread.jpg" alt="freash bread">
+    <section class="menu-grid gallery" id="productList">
+      <div class="menu-item item" data-name="Fresh Bread" data-price="30">
+        <img src="images/bread.jpg" alt="Basket of freshly baked white bread rolls">
         <h3>Fresh Bread</h3>
         <p>Traditional white, brown, and seeded loaves baked fresh every morning.</p>
+        <p class="price">From R30</p>
       </div>
 
-      <div class="menu-item">
-        <img src="images/crosissant.jpg" alt="corissants">
+      <div class="menu-item item" data-name="Croissants" data-price="25">
+        <img src="images/croissant.jpg" alt="Golden butter croissants">
         <h3>Croissants</h3>
         <p>Buttery, flaky croissants, plain or filled with almond or chocolate.</p>
+        <p class="price">From R25</p>
       </div>
 
-      <div class="menu-item">
-        <img src="images/cupcake.jpg" alt="cupcake">
+      <div class="menu-item item" data-name="Cupcakes" data-price="20">
+        <img src="images/cupcake.jpg" alt="Colourful cupcakes with buttercream icing">
         <h3>Cupcakes</h3>
         <p>Soft, moist cupcakes topped with handmade buttercream icing.</p>
+        <p class="price">From R20</p>
       </div>
 
-      <div class="menu-item">
-        <img src="images/cakes.jpg" alt="celebration cakes">
+      <div class="menu-item item" data-name="Celebration Cakes" data-price="350">
+        <img src="images/cakes.jpg" alt="Decorated celebration cakes on display">
         <h3>Celebration Cakes</h3>
         <p>Custom cakes for birthdays, weddings, and special occasions, made to order.</p>
+        <p class="price">From R350</p>
       </div>
 
-      <div class="menu-item">
-        <img src="images/muffins.jpg" alt="muffins">
+      <div class="menu-item item" data-name="Muffins" data-price="22">
+        <img src="images/muffins.jpg" alt="Freshly baked muffins">
         <h3>Muffins</h3>
         <p>A daily selection of blueberry, banana, and chocolate chip muffins.</p>
+        <p class="price">From R22</p>
       </div>
 
-      <div class="menu-item">
-        <img src="images/cookies.jpg" alt="cookies">
+      <div class="menu-item item" data-name="Cookies" data-price="15">
+        <img src="images/cookies.jpg" alt="Chocolate chip and oatmeal raisin cookies">
         <h3>Cookies</h3>
         <p>Freshly baked cookies, from classic chocolate chip to oatmeal raisin.</p>
+        <p class="price">From R15</p>
       </div>
     </section>
   </main>
@@ -75,5 +91,6 @@
     <p>Copyright 2026 Sweet Crumbs Bakery. All rights reserved.</p>
   </footer>
 
+  <script src="js/main.js" defer></script>
 </body>
 </html>
